@@ -10,7 +10,7 @@ workspace "Rogue"
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
 project "Rogue"
-	location "Hazel"
+	location "Rogue"
 	kind "SharedLib"
 	language "C++"
 
@@ -23,6 +23,7 @@ project "Rogue"
 	}
 
 	includedirs {
+		"%{prj.name}/src",
 		"%{prj.name}/vendor/spdlog/include"
 	}
 

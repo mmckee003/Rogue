@@ -1,9 +1,6 @@
 #pragma once
-
+#include "roguepch.h"
 #include "Rogue/Core.h"
-
-#include <string>
-#include <functional>
 
 namespace Rogue
 {

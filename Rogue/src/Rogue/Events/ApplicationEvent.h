@@ -2,8 +2,6 @@
 
 #include "Event.h"
 
-#include <sstream>
-
 namespace Rogue
 {
 	class ROGUE_API WindowResizeEvent : public Event

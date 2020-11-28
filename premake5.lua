@@ -9,6 +9,13 @@ workspace "Rogue"
 
 outputdir = "%{cfg.buildcfg}-%{cfg.system}-%{cfg.architecture}"
 
+-- Include directories relative to root folder --
+IncludeDir = {}
+IncludeDir["GLFW"] = "Rogue/vendor/GLFW/include"
+
+-- Includes GLFW premake5.lua
+include "Rogue/vendor/GLFW"
+
 project "Rogue"
 	location "Rogue"
 	kind "SharedLib"
@@ -27,7 +34,13 @@ project "Rogue"
 
 	includedirs {
 		"%{prj.name}/src",
-		"%{prj.name}/vendor/spdlog/include"
+		"%{prj.name}/vendor/spdlog/include",
+		"%{IncludeDir.GLFW}"
+	}
+	
+	links {
+		"GLFW",
+		"opengl32.lib"
 	}
 
 	filter "system:windows"

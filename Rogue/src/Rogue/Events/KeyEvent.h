@@ -9,6 +9,8 @@ namespace Rogue
 	public:
 		inline int GetKeyCode() const { return m_KeyCode; }
 
+		EVENT_CLASS_CATEGORY(EventCategoryKeyboard | EventCategoryInput)
+
 	protected:
 		KeyEvent(int KeyCode) : m_KeyCode(KeyCode)
 		{
@@ -43,10 +45,10 @@ namespace Rogue
 		int m_RepeatCount;
 	};
 
-	class ROGUE_API KeyReleaseEvent : public KeyEvent
+	class ROGUE_API KeyReleasedEvent : public KeyEvent
 	{
 	public:
-		KeyReleaseEvent(int KeyCode) : KeyEvent(KeyCode)
+		KeyReleasedEvent(int KeyCode) : KeyEvent(KeyCode)
 		{
 
 		}

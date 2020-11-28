@@ -2,6 +2,7 @@
 
 #include "Core.h"
 #include "Events/Event.h"
+#include "Rogue/Events/ApplicationEvent.h"
 #include "Window.h"
 
 namespace Rogue
@@ -14,7 +15,11 @@ namespace Rogue
 
 		void Run();
 
+		void OnEvent(Event& event);
+
 	private:
+		bool OnWindowClose(WindowCloseEvent e);
+
 		std::unique_ptr<Window> m_Window;
 		bool m_Running = true;
 	};

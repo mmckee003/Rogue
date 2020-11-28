@@ -58,7 +58,10 @@ project "Rogue"
 		}
 
 	filter "configurations:Debug"
-			defines "ROGUE_DEBUG"
+			defines {
+				"ROGUE_DEBUG",
+				"ROGUE_ENABLE_ASSERTS"
+			}
 			symbols "On"
 
 	filter "configurations:Release"

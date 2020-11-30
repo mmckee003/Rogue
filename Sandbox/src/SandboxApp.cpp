@@ -7,12 +7,12 @@ public:
 
 	void OnUpdate() override
 	{
-		ROGUE_INFO("ExampleLayer::OnUpdate");
+		// ROGUE_INFO("ExampleLayer::OnUpdate");
 	}
 
 	void OnEvent(Rogue::Event& e) override
 	{
-		ROGUE_TRACE("{0}", e);
+		// ROGUE_TRACE("{0}", e);
 	}
 };
 

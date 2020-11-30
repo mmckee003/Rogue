@@ -3,7 +3,6 @@
 #include "Core.h"
 #include <spdlog\spdlog.h>
 #include <spdlog/fmt/ostr.h>
-#include "Log/MessageLog.h"
 
 namespace Rogue
 {
@@ -14,9 +13,6 @@ namespace Rogue
 
 		inline static std::shared_ptr<spdlog::logger>& GetCoreLogger() { return s_CoreLogger; }
 		inline static std::shared_ptr<spdlog::logger>& GetClientLogger() { return s_ClientLogger; }
-
-		// my own logger
-		static MessageLog* my_own_log;
 
 	private:
 		static std::shared_ptr<spdlog::logger> s_CoreLogger;

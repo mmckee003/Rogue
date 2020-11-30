@@ -62,14 +62,17 @@ project "Rogue"
 				"ROGUE_DEBUG",
 				"ROGUE_ENABLE_ASSERTS"
 			}
+			buildoptions "/MDd"
 			symbols "On"
 
 	filter "configurations:Release"
 			defines "ROGUE_RELEASE"
+			buildoptions "/MD"
 			optimize "On"
 
 	filter "configurations:Dist"
 			defines "ROGUE_DIST"
+			buildoptions "/MD"
 			optimize "On"
 
 project "Sandbox"
@@ -105,12 +108,15 @@ project "Sandbox"
 
 	filter "configurations:Debug"
 			defines "ROGUE_DEBUG"
+			buildoptions "/MDd"
 			symbols "On"
 
 	filter "configurations:Release"
 			defines "ROGUE_RELEASE"
+			buildoptions "/MD"
 			optimize "On"
 
 	filter "configurations:Dist"
 			defines "ROGUE_DIST"
+			buildoptions "/MD"
 			optimize "On"
